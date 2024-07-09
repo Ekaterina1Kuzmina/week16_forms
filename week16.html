@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="week16.css">
+</head>
+<body>
+    <form id="registrationForm" name="registrationForm" novalidate>
+        <h2 style="font-family: serif;">Форма регистрации</h2>
+        <input type="text" name="firstName" class="form " placeholder="Имя" minlength="2" maxlength="20" required>
+        <span id="nameError" class="error"></span><br>
+        <input type="email" name="email" class="form" placeholder="Email" required>
+        <span id="emailError" class="error"></span><br>
+        <input type="number" name="age" class="form" placeholder="Возраст" required>
+        <span id="numberError" class="error"></span><br>
+        <label for="radio">Ваш пол:</label>
+        <input type="radio" class="check" id="sexM" name="gender">
+        <label for="sexM">М</label>
+        <input type="radio" class="check" id="sexF" name="gender">
+        <label for="sexF">Ж</label><br>
+        <select name="select" class="form" required>
+            <option value='chooseProfession'>Выберите профессию</option>
+            <option value='doctor'>Врач</option>
+            <option value='programmer'>Программист</option>
+            <option value='teacher'>Учитель</option>
+            <option value='designer'>Дизайнер</option>
+            <option value='engineer'>Инженер</option>
+            <option value='seller'>Продавец</option>
+            <option value='other'>Другое</option>
+        </select>
+        <span id="professionError" class="error"></span><br>
+        <div class="tooltip"><input type="password" class="form" name="password" placeholder="Введите пароль" minlength="8" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).*$" required>
+            <span id="passwordError" class="error"></span><br>
+        <span class="tooltiptext">Пароль должен содержать не менее 8 символов, как минимум одну заглавную букву, одну строчную букву и одну цифру</span></div><br>
+        <span id="textAgree">Подтвердите, что вы выражаете согласие на обработку персональных данных</span><input type="checkbox" name="checkbox" class="check" required>
+        <span id="agreeError" class="error"></span><br>     
+        <button type="submit" class="form" id="button">Зарегистрироваться</button>
+</form>
+<script src="week16.js"></script>
+</body>
+</html>
